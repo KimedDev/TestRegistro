@@ -1,0 +1,299 @@
+﻿@import "@sersol/ngx/styles/mixins.scss";
+@import "./variables.scss";
+
+.company-setting {
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    height: calc(100% - 48px);
+    width: calc(100% - 64px);
+    margin: 24px auto;
+    padding: 0;
+    border-radius: 24px;
+    background-color: var(--bg-1dp);
+
+    @media (max-width: 800px) {
+        height: calc(100% - 60px);
+        width: 100%;
+        margin: 60px auto 0;
+        border-radius: 0;
+    }
+
+    aside {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        background-origin: content-box;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: bottom;
+
+        @media (max-width: 800px) {
+            display: none;
+        }
+
+        h1 {
+            font-size: rem(24);
+            font-weight: 600;
+            z-index: 1;
+            position: relative;
+            padding: 60px 0 0 44px;
+        }
+
+        h5 {
+            font-weight: 500;
+            font-size: rem(12);
+            z-index: 1;
+            position: relative;
+            padding: 16px 4px 0 44px;
+        }
+
+        lottie {
+            &.bottom {
+                left: 0;
+                bottom: 0;
+                position: absolute;
+                width: 300px;
+                height: 300px;
+            }
+        }
+    }
+
+    .data {
+        flex: 1;
+        overflow: auto;
+        padding: 58px 32px 0 46px;
+
+        @media (max-width: 800px) {
+            padding: 0 16px;
+        }
+
+        .mat-tab-group {
+            height: 100%;
+
+            .mat-tab-body-wrapper {
+                height: 100%;
+            }
+        }
+
+        .form-group-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+
+            &:after {
+                content: "";
+                flex: auto;
+            }
+
+            .card {
+                margin: 24px 0 0;
+            }
+        }
+
+        .single-opt {
+            margin: 16px;
+        }
+
+        .content-placeholder {
+
+            &.slide-toggle {
+                height: 24px;
+            }
+        }
+    }
+
+    .submit {
+        z-index: 2;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        padding: 32px;
+        border-radius: 12px 0 12px 0;
+        background-color: var(--bg-0dp);
+
+        @media (max-width: 800px) {
+            padding: 8px;
+            display: inline-block;
+            bottom: initial;
+            top: 0;
+            right: 0;
+            border-radius: 0 12px 0 12px;
+            background-color: var(--bg-1dp);
+        }
+
+        .bttn {
+            // color: var(--green-font);
+            // background-color: var(--primary-color);
+
+            @media (max-width: 800px) {
+                border-radius: 50%;
+                padding: 5px;
+                height: 35px;
+                width: 35px;
+            }
+
+            .mat-icon {
+                // display: none;
+                // color: var(--green-font);
+
+                @media (max-width: 800px) {
+                    display: block;
+                    margin-right: 0;
+                }
+            }
+
+            > span {
+                margin-left: 8px;
+
+                @media (max-width: 800px) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    fieldset {
+        border-radius: 12px;
+        margin: 32px auto;
+        border: 1px solid var(--card-bg);
+
+        legend {
+            font-weight: bold;
+            text-transform: none;
+        }
+
+        .content {
+            padding: 16px 32px;
+        }
+    }
+
+    .cards {
+        display: grid;
+        justify-content: center;
+        gap: 24px;
+        margin-top: 24px;
+        padding-bottom: 24px;
+
+        .card {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            max-width: 500px;
+            padding: 24px;
+            border-radius: 12px;
+
+            @media (max-width: 800px) {
+                padding: 20px;
+            }
+
+            &:not(.inner-form) {
+                background-color: var(--card-bg);
+            }
+
+            &.inner-form {
+                cursor: default;
+                border: 1px solid var(--card-bg);
+            }
+
+            .logo {
+                min-height: 50px;
+                min-width: 50px;
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+            }
+
+            .enable {
+                width: 50px;
+                display: flex;
+                justify-content: center;
+            }
+
+            .body {
+                flex: 1;
+                padding-left: 32px;
+
+                .name {
+                    font-weight: 600;
+                    font-family: var(--font-secondary);
+                }
+
+                .desc {
+                    margin-top: 8px;
+
+                    @media (max-width: 800px) {
+                        font-size: rem(10);
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+.company-setting-item {
+    .company-setting-item-controls {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .buttons {
+            display: flex;
+            align-items: center;
+            background-color: var(--company-setting-item-controls-bg);
+            padding: 8px;
+            border-radius: 24px;
+
+            @media (max-width: 800px) {
+                margin-top: 8px;
+            }
+
+            .back {
+                margin-right: 32px;
+
+                @media (max-width: 800px) {
+                    margin-right: 8px;
+                    margin-left: 0;
+                }
+
+                &:not(.icon) {
+                    .mat-icon {
+                        margin-right: 12px;
+                    }
+                }
+            }
+
+            .save {
+                margin-right: 0;
+
+                &.icon {
+                    display: none;
+                }
+
+                @media (max-width: 800px) {
+                    &:not(.icon) {
+                        display: none;
+                    }
+
+                    &.icon {
+                        display: flex;
+                    }
+                }
+            }
+        }
+
+        .title {
+            font-weight: 600;
+            font-family: var(--font-secondary);
+            text-transform: uppercase;
+            text-align: right;
+            padding: 0 16px;
+
+            @media (min-width: 800px) {
+                display: none;
+            }
+        }
+    }
+}

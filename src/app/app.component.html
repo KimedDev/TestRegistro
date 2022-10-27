@@ -1,0 +1,89 @@
+<div class="logo"></div>
+
+
+<div class="container" [formGroup]="modelForm">
+
+  <ser-form-element class="cellphone" plain>
+
+    <label>Celular</label>
+
+    <div class="input-group">
+        <span class="addon">
+
+            <ser-select formControlName="phone_ind" [data]="options.phone_ind" simple noResponsive>
+
+                <ng-template sd-badge let-item="item">
+                    <div class="phone-ind-item">
+                        <div class="img" [ngStyle]="{'background-image': 'url(https://d2iag9moi5ipwc.cloudfront.net/assets/images/flags/CO.svg)' }"></div>
+                        +{{ item.phone_code }}
+                    </div>
+                </ng-template>
+
+                <ng-template sd-item let-item="item">
+                    <div class="phone-ind-item">
+                        <div class="img" [ngStyle]="{'background-image': 'url(https://d2iag9moi5ipwc.cloudfront.net/assets/images/flags/CO.svg)' }"></div>
+                        <div class="ind">+{{ item.phone_code }}</div>
+                        <strong>{{ item.name }}</strong>
+                    </div>
+                </ng-template>
+
+            </ser-select>
+        </span>
+
+        <input serControl formControlName="phone_number" mask="000 000-0000" inputmode="tel">
+    </div>
+
+    <div serErrors="phone_number">
+        <div serError="required"></div>
+    </div>
+  </ser-form-element>
+
+  <ser-form-element class="document-input" plain>
+
+    <label>Documento</label>
+
+    <div class="input-group">
+        <span class="addon">
+
+            <ser-select formControlName="document_type" [data]="options.documents" simple noResponsive>
+
+                <ng-template sd-badge let-item="item">
+                  <div class="type-doc">
+                    {{ item.id }}
+                  </div>
+                </ng-template>
+
+                <ng-template sd-item let-item="item">
+                  <div class="type-doc">
+                    {{ item.id }}
+                  </div> - {{ item.name }}
+                </ng-template>
+
+            </ser-select>
+        </span>
+
+        <input serControl inputRegex="[a-zA-Z+-]" type="text" formControlName="document_number">
+    </div>
+
+    <div serErrors="document_number">
+        <div serError="required"></div>
+    </div>
+  </ser-form-element>
+
+  <ser-form-element plain>
+
+    <label>Nombres y apellidos</label>
+
+    <div class="input-group">
+      <div class="addon">
+        <span class="material-icons">person</span>
+      </div>
+      <input serControl type="text" formControlName="name">
+    </div>
+
+    <div serErrors="name">
+        <div serError="required"></div>
+    </div>
+  </ser-form-element>
+
+</div>

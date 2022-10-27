@@ -1,0 +1,238 @@
+﻿@import "@sersol/ngx/styles/mixins.scss";
+@import "./variables.scss";
+
+.subcrud {
+    display: block;
+    height: 100%;
+
+    .subcrud-utils {
+        padding-bottom: 8px;
+        margin-bottom: 8px;
+        transition: all 500ms;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        border-bottom: 1px solid var(--bg-2dp);
+
+        .subtitle {
+            font-weight: bold;
+            margin-right: 40px;
+        }
+
+        .bttn {
+            height: 30px;
+            line-height: 30px;
+
+            &.icon {
+                height: 30px;
+                width: 30px;
+
+                i,
+                mat-icon {
+                    font-size: 20px;
+                }
+
+                &.delete {
+                    height: 38px;
+                    width: 38px;
+
+                    mat-icon {
+                        color: red;
+                        font-size: 26px;
+                        width: 26px;
+                        height: 26px;
+                    }
+                }
+            }
+        }
+
+        .action {
+            display: flex;
+            align-items: center;
+            border-left: 1px solid #dedede;
+        }
+    }
+
+    .subcrud-headers {
+        display: flex;
+        align-items: center;
+        border-radius: 4px 4px 0 0;
+        padding: 16px 8px;
+        margin: 0 16px;
+        background-color: var(--bg-1dp);
+
+        .checkbox-space {
+            width: 40px;
+        }
+
+        .headers {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            text-transform: uppercase;
+            font-size: rem(10);
+        }
+    }
+
+    .subcrud-wrapper {
+        position: relative;
+        transition: all 500ms;
+        overflow: auto;
+        overflow: overlay;
+        height: calc(100% - 46px);
+        padding: 8px;
+
+        .items-container {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: 100%;
+            grid-auto-rows: max-content;
+
+            .item-wrapper {
+                position: relative;
+                padding: 16px;
+                border-radius: 12px;
+                background-color: var(--crud-card-bg);
+                border-width: 2px;
+                border-style: solid;
+                border-color: transparent;
+
+                .new-mark,
+                .dirty-mark {
+                    position: absolute;
+                    top: 4px;
+                    right: 4px;
+                    width: 10px;
+                    height: 10px;
+                    background-color: limegreen;
+                    border-radius: 50%;
+                }
+
+                .dirty-mark {
+                    background-color: deepskyblue;
+                }
+
+                .checkbox-space {
+                    margin-right: 16px;
+                    margin-left: 8px;
+                    display: flex;
+                    align-items: center;
+
+                    &::before {
+                        content: "";
+                        width: 16px;
+                        height: 16px;
+                        border-radius: 4px;
+                    }
+                }
+
+                .title {
+                    font-size: rem(16);
+                }
+
+                .options {
+                    @include row;
+                    @include start-center;
+                }
+            }
+        }
+    }
+
+    .crud-headers + .crud-wrapper {
+        height: calc(100% - 157px);
+    }
+
+    .crud-sublist {
+        max-height: 110px;
+        overflow: auto;
+    }
+
+    .no-objects {
+        height: 100%;
+        width: 100%;
+        border-radius: 4px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--bg-1dp);
+
+        .image {
+            width: 150px;
+            height: 150px;
+            color: #969696;
+        }
+
+        .hint {
+            display: flex;
+            top: 24px;
+            right: 100px;
+            position: absolute;
+            color: #969696;
+            font-size: 13px;
+            font-weight: bold;
+
+            .arrow {
+                width: 40px;
+                height: 40px;
+                color: #969696;
+            }
+
+            .text {
+                margin: 26px 12px 0;
+            }
+        }
+    }
+
+    @media (max-width: 1000px) {
+        .crud-wrapper {
+            justify-content: center;
+        }
+
+        .no-objects {
+            .hint {
+                top: 5px;
+                right: 10px;
+            }
+        }
+    }
+
+    @media (max-width: 600px) {
+        .crud-utils {
+            margin: 16px 0;
+
+            button,
+            .button {
+                margin-top: 8px;
+            }
+
+            .tools {
+                justify-content: flex-end;
+
+                .title {
+                    margin: auto;
+                }
+
+                .search {
+                    -webkit-flex: 0 0 100%;
+                    flex: 0 0 100%;
+                    margin: 0 auto;
+                }
+            }
+        }
+
+        .crud-wrapper {
+            margin: 16px 0;
+        }
+    }
+}
+
+.crud-download-item {
+    img {
+        width: 24px;
+        height: 24px;
+        margin-right: 8px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+}

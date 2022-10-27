@@ -1,0 +1,19 @@
+@import "@sersol/ngx/styles/mixins.scss";
+@import "./variables.scss";
+
+.leaflet-container {
+
+    .leaflet-control-fullscreen {
+        a {
+            background-image: url('https://d2iag9moi5ipwc.cloudfront.net/assets/images/leaflet/fullscreen.png');
+        }
+    }
+
+    @media
+    (-webkit-min-device-pixel-ratio:2),
+    (min-resolution:192dpi) {
+        .leaflet-control-fullscreen a {
+            background-image: url('https://d2iag9moi5ipwc.cloudfront.net/assets/images/leaflet/fullscreen2x.png');
+        }
+    }
+}

@@ -1,0 +1,11 @@
+﻿@import "@sersol/ngx/styles/mixins";
+@import "./variables.scss";
+
+.fc-v-event {
+    border: none !important;
+    background-color: transparent !important;
+}
+
+.fc-timegrid-event-harness-inset .fc-timegrid-event, .fc-timegrid-event.fc-event-mirror, .fc-timegrid-more-link {
+    box-shadow: none !important;
+}

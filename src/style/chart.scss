@@ -1,0 +1,63 @@
+@import "./variables.scss";
+
+.chartjs-tooltip {
+    position: absolute;
+    transition: all 200ms ease-in-out;
+    background-color: var(--bg-1dp);
+    padding: 8px;
+    pointer-events: none;
+    border-radius: 12px;
+    box-shadow: 1px 0px 20px -7px rgb(0 0 0 / 26%), 0px 0px 20px -7px rgb(0 0 0 / 26%);
+
+    &.report-users {
+        display: flex;
+        align-items: center;
+
+        .date {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            width: 47px;
+            min-width: 47px;
+            height: 47px;
+            background-color: #616161;
+            border-radius: 50%;
+            padding: 4px;
+            font-weight: bold;
+            color: white;
+            margin-right: 12px;
+            font-size: 12px;
+            word-spacing: 10px;
+            line-height: 15px;
+
+            .d {
+                font-size: rem(14);
+            }
+
+            .m {
+                font-size: rem(10);
+                font-weight: normal;
+            }
+        }
+
+        .data {
+            white-space: nowrap;
+
+            .day {
+                text-transform: capitalize;
+            }
+
+            .name {
+                font-size: rem(11);
+                font-weight: bold;
+                margin-top: 4px;
+            }
+
+            .value {
+                font-weight: bold;
+            }
+        }
+    }
+}

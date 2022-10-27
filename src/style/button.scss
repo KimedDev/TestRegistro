@@ -1,0 +1,80 @@
+﻿@import "@sersol/ngx/styles/mixins.scss";
+@import "./variables.scss";
+
+.bttn {
+    font-family: var(--font-family-primary);
+    white-space: nowrap;
+
+    &.primary {
+        // color: white;
+        // background: var(--primary-gradient);
+
+        i,
+        .mat-icon {
+            color: white;
+        }
+    }
+
+    &.secondary {
+        color: white;
+        background-color: var(--primary-color);
+
+        i,
+        .mat-icon {
+            color: white;
+        }
+    }
+
+    &:hover {
+        &.primary {
+            box-shadow: 0 0 0 8px rgba(92, 32, 134, 0.28);
+        }
+
+        &.secondary {
+            box-shadow: 0 0 0 8px rgba(10, 188, 221, 0.28);
+        }
+
+        &.blue {
+            box-shadow: 0 0 0 8px rgba(132, 208, 253, 0.28);
+        }
+
+        &.green {
+            box-shadow: 0 0 0 8px rgba(135, 236, 109, 0.37);
+        }
+
+        &.orange {
+            box-shadow: 0 0 0 8px rgba(251, 188, 72, 0.16);
+        }
+
+        &.red {
+            box-shadow: 0 0 0 8px rgba(255, 165, 165, 0.28);
+        }
+
+        &.yellow {
+            box-shadow: 0 0 0 8px rgba(255, 242, 66, 0.28);
+        }
+    }
+}
+
+.bttn-group {
+    background-color: var(--bttn-group-bg);
+    border-radius: 24px;
+
+    .bttn {
+        margin: 0;
+    }
+}
+
+.fc button {
+    font-family: var(--font-family-primary);
+}
+
+.bttn-group {
+    background-color: var(--bttn-group-bg);
+    border-radius: 24px;
+
+    .bttn {
+        margin: 0;
+    }
+}
+

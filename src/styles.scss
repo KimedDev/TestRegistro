@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+@use './style/variables.scss' as *;
+
+// NGX-UI
+@import '@sersol/ngx/styles/typography.scss';
+@import '@sersol/ngx/styles/layout.scss';
+@import '@sersol/ngx/styles/loader.scss';
+@import '@sersol/ngx/styles/select.scss';
+@import '@sersol/ngx/styles/address.scss';
+@import '@sersol/ngx/styles/date.scss';
+@import '@sersol/ngx/styles/snackbar.scss';
+@import '@sersol/ngx/styles/form.scss';
+@import '@sersol/ngx/styles/filter.scss';
+@import '@sersol/ngx/styles/pin.scss';
+@import '@sersol/ngx/styles/button.scss';
+@import '@sersol/ngx/styles/default-theme.scss';
+
+
+// App
+@import './style/main.scss';
+@import './style/button.scss';
+@import './style/sidenav.scss';
+@import './style/crud.scss';
+@import './style/sub-crud.scss';
+@import './style/tab.scss';
+@import './style/settings.scss';
+@import './style/form.scss';
+@import './style/chart.scss';
+@import './style/calendar.scss';
+@import './style/loader.scss';
+@import './style/dialog.scss';
+@import './style/map.scss';
+@import './style/select.scss';
+@import './style/counters.scss';
+@import './style/animations.scss';

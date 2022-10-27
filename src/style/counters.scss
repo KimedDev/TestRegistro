@@ -1,0 +1,237 @@
+﻿@import "@sersol/ngx/styles/mixins";
+@import "./variables.scss";
+
+.dash-counter {
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-family: var(--font-secondary);
+    background-color: lighten(black, 80%);
+    border: 1px solid lightgray;
+
+    @media (max-width: 800px) {
+
+    }
+
+    .text {
+        margin-right: 16px;
+
+        .icon {
+            background-color: lighten(black, 60%);
+            display: inline-flex;
+            padding: 8px;
+            margin-bottom: 12px;
+            border-radius: 50%;
+
+            @media (max-width: 800px) {
+                margin-bottom: 0;
+            }
+
+            .mat-icon {
+                color: black;
+                font-size: 22px;
+                height: 22px;
+                width: 22px;
+
+                @media (max-width: 800px) {
+                    font-size: 14px;
+                    height: 14px;
+                    width: 14px;
+                }
+            }
+        }
+    }
+
+    .subtitle {
+        font-size: rem(11);
+        color: lighten(black, 60%);
+
+        @media (max-width: 800px) {
+            font-size: rem(8);
+            margin-top: 8px;
+        }
+    }
+
+    .title {
+        font-size: rem(14);
+
+        @media (max-width: 800px) {
+            font-size: rem(10);
+            display: none;
+        }
+    }
+
+    .data {
+        font-size: rem(24);
+        font-weight: bolder;
+        margin: 8px 0;
+        font-family: var(--font-primary);
+
+        @media (max-width: 800px) {
+            font-size: rem(19);
+            margin: 0px 0 0 8px;
+        }
+    }
+
+    &.purple {
+        background-color: lighten($icon_purple_color, 50%);
+
+        .text {
+
+            .icon {
+                background-color: lighten($icon_purple_color, 40%);
+
+                .mat-icon {
+                    color: $icon_purple_color;
+                }
+            }
+        }
+
+        .subtitle {
+            color: lighten($icon_purple_color, 25%);
+        }
+
+    }
+
+    &.blue {
+        background-color: lighten($icon_blue_color, 30%);
+
+        .text {
+
+            .icon {
+                background-color: lighten($icon_blue_color, 20%);
+
+                .mat-icon {
+                    color: $icon_blue_color;
+                }
+            }
+        }
+
+        .subtitle {
+            color: lighten($icon_blue_color, 11%);
+        }
+
+    }
+
+    &.yellow {
+        background-color: lighten($icon_yellow_color, 40%);
+        // color: darken($icon_yellow_color, 10%);
+
+        .text {
+
+            .icon {
+                background-color: lighten($icon_yellow_color, 20%);
+
+                .mat-icon {
+                    color: darken($icon_yellow_color, 10%);
+                }
+            }
+        }
+
+        .subtitle {
+            color: darken($icon_yellow_color, 8%);
+        }
+
+    }
+
+    &.orangered {
+        background-color: lighten($icon_orangered_color, 42%);
+
+        .text {
+
+            .icon {
+                background-color: lighten($icon_orangered_color, 25%);
+
+                .mat-icon {
+                    color: $icon_orangered_color;
+                }
+            }
+        }
+
+        .subtitle {
+            color: lighten($icon_orangered_color, 22%);
+        }
+
+    }
+
+    &.orange {
+        background-color: lighten($icon_orange_color, 42%);
+
+        .text {
+
+            .icon {
+                background-color: lighten($icon_orange_color, 30%);
+
+                .mat-icon {
+                    color: $icon_orange_color;
+                }
+            }
+        }
+
+        .subtitle {
+            color: lighten($icon_orange_color, 15%);
+        }
+
+    }
+
+    &.magenta {
+        background-color: lighten($icon_magenta_color, 36%);
+
+        .text {
+
+            .icon {
+                background-color: lighten($icon_magenta_color, 25%);
+
+                .mat-icon {
+                    color: $icon_magenta_color;
+                }
+            }
+        }
+
+        .subtitle {
+            color: lighten($icon_magenta_color, 15%);
+        }
+
+    }
+
+    &.red {
+        background-color: lighten($icon_red_color, 36%);
+
+        .text {
+
+            .icon {
+                background-color: lighten($icon_red_color, 25%);
+
+                .mat-icon {
+                    color: $icon_red_color;
+                }
+            }
+        }
+
+        .subtitle {
+            color: lighten($icon_red_color, 15%);
+        }
+
+    }
+
+    &.green {
+        background-color: lighten($icon_green_color, 50%);
+
+        .text {
+
+            .icon {
+                background-color: lighten($icon_green_color, 30%);
+
+                .mat-icon {
+                    color: $icon_green_color;
+                }
+            }
+        }
+
+        .subtitle {
+            color: lighten($icon_green_color, 12%);
+        }
+
+    }
+}

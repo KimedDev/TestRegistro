@@ -1,0 +1,24 @@
+
+
+.phone-ind-item {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+
+    .img {
+        --img-size: 20px;
+        min-width: var(--img-size);
+        min-height: var(--img-size);
+        margin-right: 4px;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url("https://d2iag9moi5ipwc.cloudfront.net/assets/images/account_circle_dark.svg");
+    }
+}
+
+.type-doc {
+  font-weight: 700;
+  font-size: 14px;
+  margin-right: 4px;
+}
